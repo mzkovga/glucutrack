@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: dashboard.php");
         exit;
     } else {
-        $error = "Credenciales incorrectas. Intenta con admin / admin123";
+        $error = "Credenciales incorrectas.";
     }
 }
 ?>
