@@ -1,4 +1,5 @@
 <?php
+require_once 'config.php';
 session_start();
 if (!isset($_SESSION['user'])) {
     header("Location: index.php");
@@ -11,7 +12,7 @@ if (!isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlucuTrack - Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -111,6 +112,6 @@ if (!isset($_SESSION['user'])) {
         </main>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="<?php echo BASE_URL; ?>js/app.js"></script>
 </body>
 </html>
